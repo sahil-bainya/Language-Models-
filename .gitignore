@@ -1,0 +1,14 @@
+# Undo the last commit but keep your changes unstaged
+git reset HEAD~1
+
+# Untrack .env from staging
+git rm --cached .env
+
+# Stage your other files and .gitignore
+git add .
+
+# Re-commit without the .env file
+git commit -m "Initial commit without secrets"
+
+# Push to remote
+git push -u origin main
